@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-
 import 'package:mdns_scout_example/main.dart' as app;
 
 void main() {
@@ -25,4 +24,3 @@ String expectedPlatformName() {
   if (Platform.isIOS) return 'iOS';
   throw UnsupportedError('Unsupported platform ${Platform.operatingSystem}');
 }
-
