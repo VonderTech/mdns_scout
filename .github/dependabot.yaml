@@ -1,0 +1,27 @@
+version: 2
+enable-beta-ecosystems: true
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/mdns_scout"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/mdns_scout/example"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/mdns_scout_platform_interface"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/mdns_scout_android"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pub"
+    directory: "/mdns_scout_ios"
+    schedule:
+      interval: "daily"

@@ -1,0 +1,32 @@
+name: mdns_scout
+description: A Flutter plugin to discover local network services via Multicast DNS
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: mdns_scout_android
+      ios:
+        default_package: mdns_scout_ios
+
+dependencies:
+  flutter:
+    sdk: flutter
+  mdns_scout_android:
+    path: ../mdns_scout_android
+  mdns_scout_ios:
+    path: ../mdns_scout_ios
+  mdns_scout_platform_interface:
+    path: ../mdns_scout_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.0
+  plugin_platform_interface: ^2.1.6
+  very_good_analysis: ^5.1.0
