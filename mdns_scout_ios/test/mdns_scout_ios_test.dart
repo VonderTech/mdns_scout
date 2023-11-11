@@ -16,7 +16,8 @@ void main() {
 
       log = <MethodCall>[];
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-          .setMockMethodCallHandler(mdnsScout.methodChannel, (methodCall) async {
+          .setMockMethodCallHandler(mdnsScout.methodChannel,
+              (methodCall) async {
         log.add(methodCall);
         switch (methodCall.method) {
           case 'getPlatformName':
