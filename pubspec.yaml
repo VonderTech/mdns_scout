@@ -8,11 +8,14 @@ environment:
 
 dependencies:
   bloc: ^8.1.2
+  dynamic_color: ^1.6.9
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
   flutter_localizations:
     sdk: flutter
+  flutter_native_splash: ^2.3.9
+  google_fonts: ^6.1.0
   intl: ^0.18.0
 
 dev_dependencies:
@@ -21,7 +24,16 @@ dev_dependencies:
     sdk: flutter
   mocktail: ^1.0.3
   very_good_analysis: ^5.1.0
+  flutter_launcher_icons: "^0.13.1"
 
 flutter:
   uses-material-design: true
   generate: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  background_color_ios: #2A2356
+  image_path: "assets/icon/mdns_scout_icon.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21

@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mdns_scout/app/app.dart';
-import 'package:mdns_scout/counter/counter.dart';
+import 'package:mdns_scout/presentation/app/app.dart';
+import 'package:mdns_scout/presentation/counter/counter_page.dart';
 
 void main() {
   group('App', () {
