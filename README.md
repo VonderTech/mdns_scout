@@ -1,6 +1,14 @@
-# mDNS Scout - Tool for discovering local services
+# mDNS Scout - Discover Local Services
 
-mDNS Scout is a Flutter-based mobile application for discovering mDNS based services that are registered in a local network
+Welcome to mDNS Scout, a Flutter app designed to effortlessly scan your local network for services, allowing users to browse and inspect them with ease.
+
+## What is mDNS?
+
+mDNS, or Multicast DNS, is a protocol that empowers devices on a local network to discover and connect to each other without the need for a central server. This zero-configuration networking approach is also recognized as Bonjour (by Apple) or Avahi (used in Linux environments).
+
+## Zero-Configuration Networking
+
+Zero-conf networking simplifies the user experience by automating service discovery and resolution. In the context of mDNS Scout, it means the app seamlessly finds and connects to services on your local network.
 
 [![codecov](https://codecov.io/gh/VonderTech/GlimmerBox/graph/badge.svg?token=XE90BDIFQA)](https://codecov.io/gh/VonderTech/GlimmerBox)
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
@@ -10,29 +18,29 @@ mDNS Scout is a Flutter-based mobile application for discovering mDNS based serv
 
 ### Purpose
 
-GlimmerBox is not intended to be a fully-featured production app. Instead, it serves as a learning tool to demonstrate the practical application of software engineering principles. It showcases the following principles:
+mDNS Scout is more than just a utility app; it's a learning tool showcasing software engineering principles and practical applications. The project emphasizes:
 
-- **Scalability:** How to structure the app's architecture to handle growth and maintainability.
-- **Clean Code:** Maintaining code quality and readability.
-- **Test-Driven Development (TDD):** Writing tests to ensure reliability.
-- **Dependency Injection:** Creating flexible and testable code.
-- **Null Safety:** Avoiding runtime errors with proper null safety.
-- **Functional Reactive Programming (FRP):** Efficient management of complex interactions and data flows.
-- **Immutability:** The importance of immutability in functional reactive programming.
-- **Error Handling:** Handling errors effectively with a functional approach using Either.
+**Scalability**: Organizing the app's architecture for growth and maintainability.
+**Clean Code**: Prioritizing code quality and readability.
+**Test-Driven Development (TDD)**: Ensuring reliability through comprehensive testing.
+**Dependency Injection**: Creating flexible and testable code.
+**Null Safety**: Preventing runtime errors with robust null safety.
+**Functional Reactive Programming (FRP)**: Efficiently managing complex interactions and data flows.
+**Immutability**: Emphasizing the importance of immutability in functional reactive programming.
+**Error Handling**: Effectively managing errors with a functional approach.
 
 ### App Features
 
-GlimmerBox interacts with OpenSea's API to fetch and display NFT collections. It serves as a gallery viewer where users can explore collections and individual NFTs.
+mDNS Scout simplifies the discovery of local services using mDNS protocols. It's designed to provide a seamless experience for users exploring and inspecting services in their network.
 
 ### Demo
 
 ## Installation
 
-To run GlimmerBox locally, follow these steps:
+To run mDNS Scout locally, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/VonderTech/GlimmerBox.git`
-2. Navigate to the project directory: `cd glimmerbox`
+1. Clone this repository: `git clone https://github.com/VonderTech/mdns_scout.git`
+2. Navigate to the project directory: `cd mdns_scout`
 3. Install dependencies: `flutter pub get`
 4. Run the app: `flutter run`
 

@@ -1,5 +1,5 @@
 name: mdns_scout
-description: A Very Good Project created by Very Good CLI.
+description: An app designed to effortlessly scan your local network for services
 version: 1.0.0+1
 publish_to: none
 
@@ -16,10 +16,10 @@ dependencies:
   intl: ^0.18.0
 
 dev_dependencies:
-  bloc_test: ^9.1.4
+  bloc_test: ^9.1.5
   flutter_test:
     sdk: flutter
-  mocktail: ^1.0.0
+  mocktail: ^1.0.3
   very_good_analysis: ^5.1.0
 
 flutter:
