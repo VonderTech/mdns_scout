@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mdns_scout/counter/counter.dart';
+import 'package:mdns_scout/application/counter/counter_cubit.dart';
 import 'package:mdns_scout/l10n/l10n.dart';
 
 class CounterPage extends StatelessWidget {
@@ -28,6 +28,7 @@ class CounterView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
+          Checkbox(value: true, onChanged: (value) => {}),
           FloatingActionButton(
             onPressed: () => context.read<CounterCubit>().increment(),
             child: const Icon(Icons.add),
@@ -50,6 +51,9 @@ class CounterText extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final count = context.select((CounterCubit cubit) => cubit.state);
-    return Text('$count', style: theme.textTheme.displayLarge);
+    return Text(
+      '$count',
+      style: theme.textTheme.displayLarge,
+    );
   }
 }
