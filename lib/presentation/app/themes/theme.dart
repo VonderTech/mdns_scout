@@ -1,4 +1,5 @@
 // coverage:ignore-file
+// ignore_for_file: public_member_api_docs
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
