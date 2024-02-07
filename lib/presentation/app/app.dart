@@ -1,12 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:mdns_scout/l10n/l10n.dart';
 import 'package:mdns_scout/presentation/app/themes/theme.dart';
 import 'package:mdns_scout/presentation/mdns/mdns_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
 
-  //final materialTheme = MaterialTheme(textTheme);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,8 +19,9 @@ class App extends StatelessWidget {
         colorScheme: MaterialTheme.darkScheme().toColorScheme(),
         textTheme: textTheme,
       ),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       home: const MdnsPage(),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class MdnsPage extends StatefulWidget {
@@ -7,9 +8,30 @@ class MdnsPage extends StatefulWidget {
   State<MdnsPage> createState() => _MdnsPageState();
 }
 
-class _MdnsPageState extends State<MdnsPage> {
+class _MdnsPageState extends State<MdnsPage> with WidgetsBindingObserver {
   final testList = List.generate(50, (index) => 'Some Service');
   final searchController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void didChangeLocales(List<Locale>? locales) {
+    if (context.supportedLocales.contains(locales!.first)) {
+      context.setLocale(locales.first);
+    } else {
+      context.setLocale(context.fallbackLocale!);
+    }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance.removeObserver(this);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +49,19 @@ class _MdnsPageState extends State<MdnsPage> {
                     padding: EdgeInsets.only(left: 8),
                     child: Icon(Icons.search),
                   ),
-                  hintText: 'Search',
+                  hintText: tr('SEARCH'),
                 ),
               ),
-              const Expanded(
+              Expanded(
                 child: Padding(
-                  padding: EdgeInsets.only(top: 32),
+                  padding: const EdgeInsets.only(top: 32),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircularProgressIndicator(),
+                      const CircularProgressIndicator(),
                       Padding(
-                        padding: EdgeInsets.only(top: 16),
-                        child: Text('Searching for services...'),
+                        padding: const EdgeInsets.only(top: 16),
+                        child: Text('${context.tr('LOOKING_FOR_SERVICES')}...'),
                       ),
                     ],
                   ),
