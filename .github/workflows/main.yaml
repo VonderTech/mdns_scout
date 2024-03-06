@@ -61,7 +61,7 @@ jobs:
           remove_from_coverage -f coverage/lcov.info -r '\.g\.dart$'
 
       - name: 📊 Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v2
+        uses: VeryGoodOpenSource/very_good_coverage@v3
         with:
           path: ./coverage/lcov.info
           min_coverage: 100
